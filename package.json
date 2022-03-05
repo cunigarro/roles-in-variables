@@ -1,0 +1,22 @@
+{
+  "name": "roles-in-variables",
+  "version": "1.0.0",
+  "description": "",
+  "main": "example-01.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cunigarro/roles-in-variables.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cunigarro/roles-in-variables/issues"
+  },
+  "homepage": "https://github.com/cunigarro/roles-in-variables#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
