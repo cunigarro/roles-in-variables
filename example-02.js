@@ -3,12 +3,12 @@ const arLen = 7;
 let temp, prev;
 let mostWantedHolder = 0;
 
-for (let c of [...Array(arLen).keys()]) {
-  prev = scores[c - 1];
-  if (prev > scores[c]) {
+for (let c of [...Array(arLen - 1).keys()]) {
+  prev = scores[c];
+  if (prev > scores[c + 1]) {
     temp = prev;
-    prev = scores[c];
-    scores[c] = temp;
+    prev = scores[c + 1];
+    scores[c + 1] = temp;
   }
 }
 
