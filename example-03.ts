@@ -1,3 +1,11 @@
+class Vector {
+  vectorGroups: string[];
+
+  add(c: string) {
+    this.vectorGroups.push(c);
+  }
+}
+
 class Student {
   studentId;
   totalCredits;
