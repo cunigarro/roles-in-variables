@@ -1,22 +1,29 @@
-const scores = [12, 32, 43, 2, 11, 23, 7, 9];
-const arLen = 7;
-let temp, prev;
-let mostWantedHolder = 0;
+const prompt = require('prompt-sync')();
 
-for (let c of [...Array(arLen - 1).keys()]) {
-  prev = scores[c];
-  if (prev > scores[c + 1]) {
-    temp = prev;
-    prev = scores[c + 1];
-    scores[c + 1] = temp;
+let
+  total = 0,
+  highest = 0,
+  avg = 0,
+  current = 0;
+const max = 10;
+
+for (let count of [...Array(max).keys()]) {
+  current = Number(prompt(`Current:`));
+  total = total + current;
+  avg = total / count;
+  if (current > highest) {
+    highest = current;
   }
 }
 
-console.log(scores);
+console.log('Average: ', avg.toFixed(2));
+console.log('Highest number: ', highest.toFixed(2));
 
 /**
-  temp = temporary
-  prev = follower
-  arLen = fixed
-  c = stepper
+  avg = transformation
+  highest = most wanted holder
+  current = most recent holder
+  total = gatherer
+  max = fixed value
+  count = stepper
 **/

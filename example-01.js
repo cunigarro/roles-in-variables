@@ -1,24 +1,22 @@
-const prompt = require('prompt-sync')();
+const scores = [12, 32, 43, 2, 11, 23, 7, 9];
+const arLen = 7;
+let temp, prev;
+let mostWantedHolder = 0;
 
-const ages = [20, 30, 40, 50, 60, 70];
-const itemsSize = ages.length;
-let sumOfAges = 0;
-let peopleWithSameAge = 0;
-let peopleTotal = 0;
-
-for(let i = 0; i < itemsSize; i++) {
-  peopleWithSameAge = prompt(`How many people have the age ${ages[i]}?`);
-  sumOfAges += ages[i] * peopleWithSameAge;
-  peopleTotal += parseInt(peopleWithSameAge);
+for (let c of [...Array(arLen).keys()]) {
+  prev = scores[c - 1];
+  if (prev > scores[c]) {
+    temp = prev;
+    prev = scores[c];
+    scores[c] = temp;
+  }
 }
 
-const media = sumOfAges / peopleTotal;
-
-console.log(media);
+console.log(scores);
 
 /**
-  itemsSize = fixed value
-  sumOfAges = gatherer
-  i = stepper
-  peopleWithSameAge = most recent holder
+  temp = temporary
+  prev = follower
+  arLen = fixed
+  c = stepper
 **/
