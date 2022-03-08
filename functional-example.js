@@ -20,6 +20,7 @@ console.log(bubbleScores(values));
 /**
   temp = temporary
   prev = follower
-  scores = fixed value
+  arLen = fixed value
+  scores = most recent holder
   c = stepper
 **/
