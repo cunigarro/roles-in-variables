@@ -22,3 +22,8 @@ class Student {
     this.courseList.add(c);
   }
 }
+
+/**
+  totalCredits = gatherer
+  studentId = fixed value
+**/

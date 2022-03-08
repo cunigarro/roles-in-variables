@@ -17,6 +17,6 @@ console.log(scores);
 /**
   temp = temporary
   prev = follower
-  arLen = fixed
+  arLen = fixed value
   c = stepper
 **/
